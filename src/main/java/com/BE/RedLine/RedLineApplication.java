@@ -30,7 +30,7 @@ public class RedLineApplication {
 								"Cache-Control", "Content-Type")
 						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
-//						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 
 				;
@@ -41,7 +41,7 @@ public class RedLineApplication {
 								"Cache-Control", "Content-Type")
 						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
-//						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/responder/{name}")
@@ -51,7 +51,7 @@ public class RedLineApplication {
 								"Cache-Control", "Content-Type")
 						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
-//						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/nineline")
@@ -61,7 +61,7 @@ public class RedLineApplication {
 								"Cache-Control", "Content-Type")
 						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
-//						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 				System.out.println("-registry-"+registry.toString());
