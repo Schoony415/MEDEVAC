@@ -14,6 +14,7 @@ public class RedLineApplication {
 	private String ExpectedURL = "http://localhost:3000";
 	private String internalIP = "127.0.0.1:3000";
 	private String outsideIP = "198.213.89.195"; //ip of school
+	private String outsideIP2 = "198.213.89.145"; //ip of school 2
 
 	public static void main(String[] args) {
 		SpringApplication.run(RedLineApplication.class, args);
@@ -33,6 +34,8 @@ public class RedLineApplication {
 						.allowedOrigins(ExpectedURL)
 						.allowedOrigins(internalIP)
 						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP2)
+
 				;
 				registry.addMapping("/requests/{id}")
 						.allowedMethods("GET","PATCH")
@@ -42,6 +45,7 @@ public class RedLineApplication {
 						.allowedOrigins(ExpectedURL)
 						.allowedOrigins(internalIP)
 						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/responder/{name}")
 						.allowedMethods("GET")
@@ -51,6 +55,7 @@ public class RedLineApplication {
 						.allowedOrigins(ExpectedURL)
 						.allowedOrigins(internalIP)
 						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/nineline")
 						.allowedMethods("POST")
@@ -60,6 +65,7 @@ public class RedLineApplication {
 						.allowedOrigins(ExpectedURL)
 						.allowedOrigins(internalIP)
 						.allowedOrigins(outsideIP)
+						.allowedOrigins(outsideIP2)
 				;
 			}
 		};
