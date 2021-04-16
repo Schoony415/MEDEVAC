@@ -24,12 +24,16 @@ public class DispatcherController {
         return requestRepository.findAll();
     }
     //get one
-    @GetMapping("/requests/{id}")
+//    @GetMapping("/requests/{id}")
+    @CrossOrigin
+    @RequestMapping(method=RequestMethod.GET, path="/requests/{id}")
     public Optional<Request> getone(@PathVariable long id){
         return requestRepository.findById(id);
     }
     //patch one
-    @PatchMapping("/requests/{id}") //takes a key value pair for each paramater to change
+//    @PatchMapping("/requests/{id}") //takes a key value pair for each paramater to change
+    @CrossOrigin
+    @RequestMapping(method=RequestMethod.PATCH, path= "/requests/{id}")
     public Request assign(@PathVariable long id, @RequestBody Map<String,String> input){
         Request request = requestRepository.findById(id).get();
         if(request == null){return null;}
