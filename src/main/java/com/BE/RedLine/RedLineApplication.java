@@ -67,7 +67,7 @@ public class RedLineApplication {
 //						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
-				System.out.println(registry.toString());
+				System.out.println("-registry-"+registry.toString());
 			}
 		};
 	}
