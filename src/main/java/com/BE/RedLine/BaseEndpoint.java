@@ -8,6 +8,6 @@ public class BaseEndpoint {
     @CrossOrigin
     @RequestMapping(method= RequestMethod.GET, path = "")
     public String main(){
-        return "<html><body><h1 color='#ff0000' >This endpoint works! welcome to online hosting! have a good day</h1></body></html>";
+        return "<html><body color='#ff0000'><h1  >This endpoint works! welcome to online hosting! have a good day</h1></body></html>";
     }
 }
