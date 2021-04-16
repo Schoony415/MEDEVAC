@@ -36,6 +36,7 @@ public class DispatcherController {
             //set the associated property
             switch (key.toLowerCase()){
                 case "responder": request.setResponder(input.get(key)); break;
+                case "completed": request.setCompleted(Boolean.parseBoolean((input.get(key)))); break;
             }
         }
 
