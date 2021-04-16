@@ -15,28 +15,28 @@ public class RedLineApplication {
 	}
 
 //for cors
-//	@Bean
-//	public WebMvcConfigurer corsConfigurer() {
-//		return new WebMvcConfigurer() {
-//			@Override
-//			public void addCorsMappings(CorsRegistry registry) {
-//				registry.addMapping("/requests")
-//						.allowedMethods("GET")
-//						.allowedOrigins(ExpectedURL)
-//				;
-//				registry.addMapping("/requests/{id}")
-//						.allowedMethods("GET","PATCH")
-//						.allowedOrigins(ExpectedURL)
-//				;
-//				registry.addMapping("/responder/{name}")
-//						.allowedMethods("GET")
-//						.allowedOrigins(ExpectedURL)
-//				;
-//				registry.addMapping("/nineline")
-//						.allowedMethods("POST")
-//						.allowedOrigins(ExpectedURL)
-//				;
-//			}
-//		};
-//	}
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/requests")
+						.allowedMethods("GET")
+						.allowedOrigins(ExpectedURL)
+				;
+				registry.addMapping("/requests/{id}")
+						.allowedMethods("GET","PATCH")
+						.allowedOrigins(ExpectedURL)
+				;
+				registry.addMapping("/responder/{name}")
+						.allowedMethods("GET")
+						.allowedOrigins(ExpectedURL)
+				;
+				registry.addMapping("/nineline")
+						.allowedMethods("POST")
+						.allowedOrigins(ExpectedURL)
+				;
+			}
+		};
+	}
 }
