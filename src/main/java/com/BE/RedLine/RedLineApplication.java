@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class RedLineApplication {
 	private String ExpectedURL = "http://localhost:3000";
+	private String outsideIP = "198.213.89.195";
 	public static void main(String[] args) {
 		SpringApplication.run(RedLineApplication.class, args);
 	}
@@ -23,18 +24,22 @@ public class RedLineApplication {
 				registry.addMapping("/requests")
 						.allowedMethods("GET")
 						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(outsideIP)
 				;
 				registry.addMapping("/requests/{id}")
 						.allowedMethods("GET","PATCH")
 						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(outsideIP)
 				;
 				registry.addMapping("/responder/{name}")
 						.allowedMethods("GET")
 						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(outsideIP)
 				;
 				registry.addMapping("/nineline")
 						.allowedMethods("POST")
 						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(outsideIP)
 				;
 			}
 		};
