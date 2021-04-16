@@ -31,7 +31,7 @@ public class RedLineApplication {
 //						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
 //								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
 //								"Cache-Control", "Content-Type")
-//						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
 //						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
@@ -42,7 +42,7 @@ public class RedLineApplication {
 //						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
 //								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
 //								"Cache-Control", "Content-Type")
-//						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
 //						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
@@ -52,7 +52,7 @@ public class RedLineApplication {
 //						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
 //								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
 //								"Cache-Control", "Content-Type")
-//						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
 //						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
@@ -62,7 +62,7 @@ public class RedLineApplication {
 //						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
 //								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
 //								"Cache-Control", "Content-Type")
-//						.allowedOrigins(ExpectedURL)
+						.allowedOrigins(ExpectedURL)
 //						.allowedOrigins(internalIP)
 //						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
