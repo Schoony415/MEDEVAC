@@ -8,34 +8,34 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class RedLineApplication {
-private String ExpectedURL = "http://localhost:3000";
+	private String ExpectedURL = "http://localhost:3000";
 	public static void main(String[] args) {
 		SpringApplication.run(RedLineApplication.class, args);
 	}
 
-
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/requests")
-						.allowedMethods("GET")
-						.allowedOrigins(ExpectedURL)
-				;
-				registry.addMapping("/requests/{id}")
-						.allowedMethods("GET","PATCH")
-						.allowedOrigins(ExpectedURL)
-				;
-				registry.addMapping("/responder/{name}")
-						.allowedMethods("GET")
-						.allowedOrigins(ExpectedURL)
-				;
-				registry.addMapping("/nineline")
-						.allowedMethods("POST")
-						.allowedOrigins(ExpectedURL)
-				;
-			}
-		};
-	}
+//for cors
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/requests")
+//						.allowedMethods("GET")
+//						.allowedOrigins(ExpectedURL)
+//				;
+//				registry.addMapping("/requests/{id}")
+//						.allowedMethods("GET","PATCH")
+//						.allowedOrigins(ExpectedURL)
+//				;
+//				registry.addMapping("/responder/{name}")
+//						.allowedMethods("GET")
+//						.allowedOrigins(ExpectedURL)
+//				;
+//				registry.addMapping("/nineline")
+//						.allowedMethods("POST")
+//						.allowedOrigins(ExpectedURL)
+//				;
+//			}
+//		};
+//	}
 }
