@@ -28,43 +28,43 @@ public class RedLineApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/requests")
 						.allowedMethods("GET")
-						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
-								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
-								"Cache-Control", "Content-Type")
-						.allowedOrigins(ExpectedURL)
-						.allowedOrigins(internalIP)
-						.allowedOrigins(outsideIP)
+//						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
+//								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
+//								"Cache-Control", "Content-Type")
+//						.allowedOrigins(ExpectedURL)
+//						.allowedOrigins(internalIP)
+//						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 
 				;
 				registry.addMapping("/requests/{id}")
 						.allowedMethods("GET","PATCH")
-						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
-								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
-								"Cache-Control", "Content-Type")
-						.allowedOrigins(ExpectedURL)
-						.allowedOrigins(internalIP)
-						.allowedOrigins(outsideIP)
+//						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
+//								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
+//								"Cache-Control", "Content-Type")
+//						.allowedOrigins(ExpectedURL)
+//						.allowedOrigins(internalIP)
+//						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/responder/{name}")
 						.allowedMethods("GET")
-						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
-								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
-								"Cache-Control", "Content-Type")
-						.allowedOrigins(ExpectedURL)
-						.allowedOrigins(internalIP)
-						.allowedOrigins(outsideIP)
+//						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
+//								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
+//								"Cache-Control", "Content-Type")
+//						.allowedOrigins(ExpectedURL)
+//						.allowedOrigins(internalIP)
+//						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 				registry.addMapping("/nineline")
 						.allowedMethods("POST")
-						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
-								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
-								"Cache-Control", "Content-Type")
-						.allowedOrigins(ExpectedURL)
-						.allowedOrigins(internalIP)
-						.allowedOrigins(outsideIP)
+//						.allowedHeaders("Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
+//								"Access-Control-Request-Method", "Access-Control-Request-Headers", "Origin",
+//								"Cache-Control", "Content-Type")
+//						.allowedOrigins(ExpectedURL)
+//						.allowedOrigins(internalIP)
+//						.allowedOrigins(outsideIP)
 						.allowedOrigins(outsideIP2)
 				;
 			}
