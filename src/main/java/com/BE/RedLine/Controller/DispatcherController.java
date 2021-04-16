@@ -17,7 +17,9 @@ public class DispatcherController {
     }
 
     //get all
-    @GetMapping("/requests")
+//    @GetMapping("/requests")
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path="/requests")
     public Iterable<Request> getall(){
         return requestRepository.findAll();
     }
