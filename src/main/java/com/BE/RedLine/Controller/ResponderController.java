@@ -12,13 +12,13 @@ import java.util.Optional;
 //@RequestMapping("")
 public class ResponderController {
 
-//    final RequestRepo requestRepository;
+    final RequestRepo requestRepository;
 
     final ResponderRepo responderRepository;
 
-    public ResponderController(//RequestRepo requestRepository,
+    public ResponderController(RequestRepo requestRepository,
                                ResponderRepo responderRepository)     {
-//        this.requestRepository = requestRepository;
+        this.requestRepository = requestRepository;
         this.responderRepository = responderRepository;
     }
 
@@ -29,8 +29,8 @@ public class ResponderController {
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, path = "/responder/{name}")
     public Iterable<Request> getMyRequests(@PathVariable String name){
-        //return requestRepository.getRequestsByResponder(name);
-        return responderRepository.findByName(name).get().getRequestList();
+        return requestRepository.getRequestsByResponder(name);
+//        return responderRepository.findByName(name).get().getRequestList();
     }
 
 //get by id

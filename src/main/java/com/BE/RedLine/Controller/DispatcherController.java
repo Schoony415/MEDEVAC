@@ -46,7 +46,8 @@ public class DispatcherController {
         for(String key : input.keySet()){
             //set the associated property
             switch (key.toLowerCase()){
-                case "responder": request = this.jointables(input.get(key) ,request); break;
+                case "responder": request.setResponder(input.get(key)); break;
+                    //request = this.jointables(input.get(key) ,request); break;
                 case "completed": request.setCompleted(Boolean.parseBoolean((input.get(key)))); break;
                 //updating the nineline
                 case "line6" :
@@ -63,19 +64,19 @@ public class DispatcherController {
         return requestRepository.save(request);
     }
 
-    //handler for setting responder to request
-    public Request jointables(String responder, Request request){
-        //look up responder
-        Optional<Responder> tempResponder = responderRepository.findByName(responder);
-        if(tempResponder == null){
-            return null;
-        }
-        //set responder to request
-        request.setResponder(tempResponder.get());
-        //save request //this happens in patch function
-        //return requestRepository.save(request);
-        return request;
-    }
+//    //handler for setting responder to request
+//    public Request jointables(String responder, Request request){
+//        //look up responder
+//        Optional<Responder> tempResponder = responderRepository.findByName(responder);
+//        if(tempResponder == null){
+//            return null;
+//        }
+//        //set responder to request
+//        request.setResponder(tempResponder.get());
+//        //save request //this happens in patch function
+//        //return requestRepository.save(request);
+//        return request;
+//    }
 
 
 }

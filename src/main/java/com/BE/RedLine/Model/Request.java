@@ -20,10 +20,10 @@ public class Request extends NineLine {
     private boolean completed = false;
 
 
-    @ManyToOne(fetch=FetchType.LAZY)//, cascade = CascadeType.ALL) //when you delete with cascade it also kills my spaceship
-    @JoinColumn(name="requestList")
-    @JsonBackReference
-    private Responder responder = null;
+//    @ManyToOne(fetch=FetchType.LAZY)//, cascade = CascadeType.ALL) //when you delete with cascade it also kills my spaceship
+//    @JoinColumn(name="requestList")
+//    @JsonBackReference
+    private String responder = "";
 
 
     public Request( //5line

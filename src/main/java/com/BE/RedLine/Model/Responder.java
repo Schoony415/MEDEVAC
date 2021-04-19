@@ -14,16 +14,16 @@ public class Responder {
     private long id; //table id
     private String name;
 
-    @OneToMany(mappedBy = "responder", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Request> requestList; //contains foreign keys
+//    @OneToMany(mappedBy = "responder", fetch = FetchType.LAZY,
+//            cascade = CascadeType.ALL)
+//    @JsonManagedReference
+//    private List<Request> requestList; //contains foreign keys
 
     @JsonCreator
-    public Responder(long id, String name, List<Request> requestList) {
+    public Responder(long id, String name){//}, List<Request> requestList) {
         this.id = id;
         this.name = name;
-        this.requestList = requestList;
+//        this.requestList = requestList;
     }
 
     public Responder() {
@@ -48,13 +48,13 @@ public class Responder {
         this.name = name;
     }
 
-    @JsonGetter
-    public List<Request> getRequestList() {
-        return requestList;
-    }
-    @JsonSetter
-    public void setRequestList(List<Request> requestList) {
-        this.requestList = requestList;
-    }
+//    @JsonGetter
+//    public List<Request> getRequestList() {
+//        return requestList;
+//    }
+//    @JsonSetter
+//    public void setRequestList(List<Request> requestList) {
+//        this.requestList = requestList;
+//    }
 
 }

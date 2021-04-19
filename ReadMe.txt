@@ -42,10 +42,10 @@ NineLine:
 Request extends NineLine:
     private long id //table id
     private boolean completed
-    private Responder responder //key to responder table when assigned
+    private String responder //key to responder table when assigned
 
 Responder
     private long id //table id
     private String name
-    private list<Request> requestList //contains foreign keys
+
 
