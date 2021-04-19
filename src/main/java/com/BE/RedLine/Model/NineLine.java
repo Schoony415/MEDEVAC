@@ -19,14 +19,14 @@ import javax.persistence.MappedSuperclass;
 @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter
 public class NineLine {
-    private String location;
-    private String callSign;
-    private String patientUrgency;
-    private String specialEquipment;
-    private String patientType;
-    private String security;
-    private String hlzMarking;
-    private String nationality;
+    private String location; //line 1
+    private String callSign; //line 2
+    private String patientUrgency; //line 3
+    private String specialEquipment; //line 4
+    private String patientType; //line 5
+    private String security; //line 6
+    private String hlzMarking; //line 7
+    private String nationality; //line 8
     private String nbc; //line9; //special
 
     public NineLine( //5line

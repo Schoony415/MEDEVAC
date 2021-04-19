@@ -1,6 +1,7 @@
 package com.BE.RedLine.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,13 @@ public class Request extends NineLine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private boolean completed = false;
-    private String responder = "";
+
+
+    @ManyToOne(fetch=FetchType.LAZY)//, cascade = CascadeType.ALL) //when you delete with cascade it also kills my spaceship
+    @JoinColumn(name="requestList")
+    @JsonBackReference
+    private Responder responder = null;
+
 
     public Request( //5line
              String location,
