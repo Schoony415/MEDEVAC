@@ -1,8 +1,8 @@
 //Created by Joshua Schoonover and Rob Payne
 
-CORS expecing port 3000
-my port 9090
+application props updated to use heroku
 
+//--------------------------------------
 endpoints:
 Dispatcher Controller:
 Get /requests -get all
